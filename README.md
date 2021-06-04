@@ -129,6 +129,9 @@ $ python -m pip install -r requirements-dev.txt
 $ python -m pip install -e .
 ```
 
+## Changes in this fork
+
+* Nearby is disabled
 ## Testing
 
 ```

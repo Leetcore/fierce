@@ -291,10 +291,11 @@ def fierce(**kwargs):
 
     if kwargs.get("range"):
         range_ips = range_expander(kwargs.get("range"))
-        nearby = find_nearby(
-            resolver,
-            range_ips,
-        )
+        nearby = None
+        #nearby = find_nearby(
+        #    resolver,
+        #    range_ips,
+        #)
         if nearby:
             print("Nearby:")
             pprint.pprint(nearby)
@@ -373,12 +374,13 @@ def fierce(**kwargs):
 
         ips = expander_func(ip)
         unvisited_ips = unvisited(ips)
-
-        nearby = find_nearby(
-            resolver,
-            unvisited_ips,
-            filter_func=filter_func
-        )
+        
+        nearby = None
+        # nearby = find_nearby(
+        #   resolver,
+        #    unvisited_ips,
+        #    filter_func=filter_func
+        #)
 
         print_subdomain_result(
             url,
